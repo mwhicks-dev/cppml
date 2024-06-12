@@ -12,6 +12,11 @@ namespace cppml {
 
         virtual void validate(Type&) = 0;
 
+        /// @brief ordinal ensuring that a property is not transformed 
+        ///     inappropriately (eg. nominal to ratio); lower is less mutable
+        /// @return size_t ordering type
+        virtual size_t getOrdinal() = 0;
+
     };
 
 }

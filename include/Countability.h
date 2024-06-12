@@ -4,7 +4,16 @@
 namespace cppml {
 
     /// @brief parent of all countability indicators for a data attribute
-    class Countability {};
+    class Countability {
+
+    public:
+
+        /// @brief ordinal ensuring that a type is not transformed 
+        ///     inappropriately (eg. discrete to continuous)
+        /// @return size_t ordering type
+        virtual size_t getOrdinal() = 0;
+
+    };
 
 }
 
